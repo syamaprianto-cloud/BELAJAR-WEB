@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>syam profil</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome untuk icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background animasi -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Konten utama -->
+  <div class="container crt">
+    <div class="avatar animate-fade-up">
+      <img src="https://a.top4top.io/p_35588jar80.jpg" alt="Avatar" />
+    </div>
+    <h1 class="animate-fade-up" style="animation-delay: 0.2s">@syam.desu</h1>
+    <p class="animate-fade-up" style="animation-delay: 0.4s">🎮 Gamer | 💻 Dev | anime lovers</p>
+    
+    <div class="links">
+      <a id="music-toggle" class="animate-fade-up" style="animation-delay: 1.7s; cursor: pointer;">
+      <i class="fas fa-music"></i> Music (Play)
+      </a>
+      <a href="https://www.instagram.com/syamdesu?igsh=eDJmYm9wYWl0YTA0" class="animate-fade-up" style="animation-delay: 1.2s">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.tiktok.com/@samzxy775?_t=ZS-906Ywx4VnWf&_r=1" class="animate-fade-up" style="animation-delay: 1.6s">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+      </a>
+      <a href="syam.html" class="animate-fade-up" style="animation-delay: 1.2s">
+        <i class="fas fa-phone"></i> CS
+
+      </a>
+    </div>
+
+    <footer class="animate-flicker">🕹️ Powered by syam - 2025</footer>
+  </div>
+
+  <audio id="click-sound" src="https://f.top4top.io/m_3558sxkiq0.ogg" preload="auto"></audio>
+  <!-- Musik autoplay -->    
+  <audio id="bg-music" src="https://a.top4top.io/m_35589748u0.mp3" preload="auto" loop></audio>
+<script>
+  const bgMusic = document.getElementById("bg-music");
+  const musicToggle = document.getElementById("music-toggle");
+
+  // Event untuk toggle musik
+  musicToggle.addEventListener("click", () => {
+    if (bgMusic.paused) {
+      bgMusic.play().then(() => {
+        musicToggle.innerHTML = '<i class="fas fa-music"></i> Music (Pause)';
+      }).catch(err => {
+        console.warn("Gagal memutar musik:", err);
+      });
+    } else {
+      bgMusic.pause();
+      musicToggle.innerHTML = '<i class="fas fa-music"></i> Music (Play)';
+    }
+  });
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
